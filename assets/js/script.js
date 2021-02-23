@@ -1,4 +1,25 @@
-//Setting variables
+//Setting variables and elements
+
+var quizBody = document.getElementById("quiz");
+var scoresEl = document.getElementbyID ("scores");
+var finalScoreEl= document.getElementbyID ("finalScore");
+var gameoverDiv = document.getElementbyID ("gameover");
+var quizTimer = document.getElementById ("timer");
+var startQuizBtn = document.getElementById ("startBtn");
+var startQuizDiv = document.getElementById ("startpage");
+var scoreContainer = document.getElementById ("scoreContainer");
+var scoreDiv = document.getElementById ("scorePage");
+var scoreInputName = document.getElementById ("initials");
+var scoreDisplay = document.getElementById ("score-initials");
+var endGameBtn = document.getElementById ("endGameBtn");
+var submitScoreBtn = document.getElementById ("submitScoreBtn");
+var scoreDisplay = document.getElementById ("score");
+var buttonA = document.getElementById ("a");
+var buttonB = document.getElementById ("b");
+var buttonC = document.getElementById ("c");
+var buttonD = document.getElementById ("d");
+
+
 
 
 

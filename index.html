@@ -30,7 +30,31 @@
       <div id="result"></div>
     </div>
 
-  
+    <!--end of game-->
+    <div id="gameover">
+      <div id="finalScore"></div>
+      <input type="text" size="50" placeholder="Please enter your initials to add to the scoreboard"
+        name="initials" id="initials" />
+      <button id="submitScoreBtn">Submit Score</button>
+    </div>
+
+    <!--display scores-->
+    <div id=scoreContainer>
+      <div id="scorePage">
+        <div id="score-header">
+          <h3>User Initials</h3>
+          <h3>Score</h3>
+        </div>
+        <div id="score-initials"></div>
+        <div id="score"></div>
+      </div>
+    
+      <!--restart game or clear scores-->
+      <div id="endGameBtn">
+        <button id="tryAgain" onclick="replayQuiz()">Try Again</button>
+        <button id="clearScores" onclick="clearScore()">Clear Scores</button>
+      </div>
+    </div>
   </div>
 
   <!--footer-->
@@ -39,7 +63,6 @@
   </footer>
 
   <script src="assets/js/script.jss"></script>
-  <script src="assets/js/questions.js"></script>
 
 </body>
 </html>
