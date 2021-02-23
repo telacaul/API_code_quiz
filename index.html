@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Password Generator</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Password Generator</h1>
-      </header>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
-        </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Knowledge Quiz</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+  <!--quiz start and instructions-->
+  <div class="container">
+    <div id="startpage">
+      <h2>Welcome to the Coding Knowledge Quiz</h2>
+      <h3>Answer as many multiple-choice questions as you can before time runs out. 
+          <br/> Additional time is deducted for every wrong answer.</h3>
+          <button id="startBtn">Start</button>
     </div>
-    <!--connecting HTML to JS-->
-    <script type="text/javascript" src="assets/js/script.js"></script>
-  </body>
+
+    <!--quiz multimple choice and timer-->
+    <div id="quiz">
+      <div id="timer">Time left:</div>
+      <div>
+        <p>Questions Placeholder</p>
+      </div>
+      <button id="a" onclick="checkAnswer('a')">A</button>"
+      <button id="b" onclick="checkAnswer('b')">B</button>"
+      <button id="c" onclick="checkAnswer('c')">C</button>" 
+      <button id="d" onclick="checkAnswer('d')">D</button>"
+      <div id="result"></div>
+    </div>
+
+  
+  </div>
+
+  <!--footer-->
+  <footer>
+
+  </footer>
+
+  <script src="assets/js/script.jss"></script>
+  <script src="assets/js/questions.js"></script>
+
+</body>
 </html>

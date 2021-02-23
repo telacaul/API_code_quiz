@@ -9,7 +9,7 @@
 ![Scoreboard]
 
 ## Launch Code Quiz
-Try out the quiz here:  https://telacaul.github.io/js_password_generator/
+Try out the quiz here:  https://telacaul.github.io/API_code_quiz/
 
 
 ## Acceptance Criteria
