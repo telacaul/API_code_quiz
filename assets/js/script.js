@@ -77,70 +77,97 @@ function startQuiz() {
   quizBody.style.display = "block";
 }
 
-
-
-
-
-//TIMER INFO FROM CLASS
-
-// Setting variables for the elements that we want to grab from the page
-// that we wanna make use of
-var timerEl = document.getElementById('countdown');
-var mainEl = document.getElementById('main');
-var startBtn = document.getElementById('start');
-var message =
-  'Congratulations! Now you are prepared to tackle the Challenge this week! Good luck!';
-// .split is a function of strings or String prototype meaning you can call split on any string
-// its turns a string into an array
-// using the thing we pass into split as the splitter
-var words = message.split(' ');
-// Timer that counts down from 5
-function countdown() {
-  var timeLeft = 2;
-  // We are not using a for loop to decrement the timer by 1
-  // We are using setInterval to decrement it by 1 every second
-  // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
-  var timeInterval = setInterval(function() {
-    // As long as the `timeLeft` is greater than 1
-    if (timeLeft > 1) {
-      // Set the `textContent` of `timerEl` to show the remaining seconds
-      timerEl.textContent = timeLeft + ' seconds remaining';
-      // Decrement `timeLeft` by 1
-      timeLeft--;
-    } else if (timeLeft === 1) {
-      // When `timeLeft` is equal to 1, rename to 'second' instead of 'seconds'
-      timerEl.textContent = timeLeft + ' second remaining';
-      timeLeft--;
-    } else {
-      // Once `timeLeft` gets to 0, set `timerEl` to an empty string
-      timerEl.textContent = '';
-      // Use `clearInterval()` to stop the timer
-      // clear Interval is a built in function for JS
-      // you can call it with any declared setInterval function
-      // and what it does is it stops that setInterval from firing again
-      // stops timeInterval from happening again every second
-      clearInterval(timeInterval);
-      // Call the `displayMessage()` function
-      displayMessage();
-    }
-  }, 1000);
+//Show quiz score
+function showScore() {
+  quizBody.style.display = "none"
+  gameoverDiv.style.display = "flex";
+  clerIntervale(timerInterval);
+  scoreInputName.value = "";
+  finalScoreEl.innerHTML = "You got " + score + " out of " + quizQuestion.length + " correct!";
 }
-// Displays the message one word at a time
-function displayMessage() {
-  console.log(words);
-  var wordCount = 0;
-  // words = ["manny", "cat", "monkeys", ]
-  // words[4] === undefined;
-  // [ "CONRA"]
-  // Uses the `setInterval()` method to call a function to be executed every 300 milliseconds
-  var msgInterval = setInterval(function() {
-    // is to control that we are not out of bounds in our timer
-    if (words[wordCount] === undefined) {
-      clearInterval(msgInterval);
-    } else {
-      mainEl.textContent = words[wordCount];
-      wordCount++;
-    }
-  }, 1000);
+
+//Collect user initials for scoreboard 
+
+submitScoreBtn.addEventListener("click", function highscore() {
+  if (scoreInputName.value === "") {
+    alert("Please enter first and last initial");
+    return false;
+  } else {
+    var savedHighscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
+    var currentUser = highscoreInputName.value.trim();
+    var currentHighscore = {
+      name: currentUser,
+      score: score
+    };
+
+    savedHighscores.push(currentHighscore);
+    localStorage.setItem("savedHighscores", JSON.stringify(savedHighscores));
+    generateHighscores();
+  }
+});
+
+//Determining and generating the high score
+
+function generateHighscores() {
+  highscoreDisplayName.innerHTML = "";
+  highscoreDisplayScore.innerHTML = "";
+  var highscores = JSON.parse(localStorage.getItem("savedHighscores")) || [];
+  for (i=0; i < highscores.length; i++) {
+    var newNameSpan = document.createElement("li");
+    var newScoreSpan = document.createElement("li");
+    newNameSpan.textContent = highscores[i].name;
+    newScoreSpan.textContent = highscores[i].score;
+    highscoreDisplayName.appendChild(newNameSpan);
+    highscoreDisplayScore.appendChild(newScoreSpan);
+  }
 }
-startBtn.onclick = countdown;
+
+//Displaying high schore
+function showHighscore() {
+  startQuizDiv.style.dislay = "none";
+  gameoverDiv.style.display = "none";
+  highscoreContainer.style.display = "flex";
+  highscoreDiv.style.display = "block";
+  endGameBtns.style.display = "flex";
+
+  generateHighscores();
+}
+
+//Clear score and name initials
+function clearScore() {
+  window.localStorage.clear();
+  highscoreDisplayName.textContent="";
+  highscoreDisplayScore.textContent="";
+}
+
+//Restart quiz to try again
+function replayQuiz() {
+  highscoreContainer.sytle.display = "none";
+  gameoverDiv.style.display = "none";
+  startQuizDiv.style.display = "flex";
+  timeLeft = 76;
+  score = 0;
+  currentQuestionIndex = 0;
+}
+
+//Function booleans for a quiz answers
+function checkAnswer(answer) {
+  correct = quizQuestion[currentQuestionIndex].correctAnswer;
+
+  if (answer === correct && currentQuestionIndex !== finalQuestionIndex) {
+    score++;
+    currentQuestionIndex++;
+    generateQuestion();
+    //Deduct 10 sections if answer in incorrect or continue if correct
+  } else if (answer !== correct && currentQuestionIndex !== finalQuestionIndex) {
+    timeLeft = timeLeft - 10;
+    currentQuestionIndex++;
+    generateQuestion();
+  } else {
+    showScore();
+  } 
+}
+
+//Start quiz button
+startQuizBtn.addEventListener("click", startQuiz);
+
