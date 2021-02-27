@@ -19,7 +19,34 @@ var buttonB = document.getElementById ("b");
 var buttonC = document.getElementById ("c");
 var buttonD = document.getElementById ("d");
 
+//Questions and answer key
+const quizQuestion = [{
+  question: "...",
+  choiceA: "stuff",
+  choiceB: "also stuff",
+  choiceC: "more stuff",
+  choiceD: "nothing",
+  correctAnswer: "a"
+  }
+];
 
+//Variables
+var finalQuestions = quizQuestion.length;
+var currentQuestion = 0;
+var timeLeft=60;
+var timerInterval;
+var score = 0;
+var correct;
+
+//Generating questions
+function generateQuestion() {
+  gameoverDiv.style.display="none";
+  if (currentQuestion === finalQuestion) {
+    return showScore();
+  }
+
+  var
+}
 
 
 
