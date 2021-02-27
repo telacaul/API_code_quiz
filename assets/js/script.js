@@ -1,23 +1,23 @@
 //Setting variables and elements
 
-var quizBody = document.getElementById("quiz");
-var scoresEl = document.getElementbyID ("scores");
-var finalScoreEl= document.getElementbyID ("finalScore");
-var gameoverDiv = document.getElementbyID ("gameover");
-var quizTimer = document.getElementById ("timer");
-var startQuizBtn = document.getElementById ("startBtn");
-var startQuizDiv = document.getElementById ("startpage");
-var scoreContainer = document.getElementById ("scoreContainer");
-var scoreDiv = document.getElementById ("scorePage");
-var scoreInputName = document.getElementById ("initials");
-var scoreDisplay = document.getElementById ("score-initials");
-var endGameBtn = document.getElementById ("endGameBtn");
-var submitScoreBtn = document.getElementById ("submitScoreBtn");
-var scoreDisplay = document.getElementById ("score");
-var buttonA = document.getElementById ("a");
-var buttonB = document.getElementById ("b");
-var buttonC = document.getElementById ("c");
-var buttonD = document.getElementById ("d");
+const quizBody = document.getElementById("quiz");
+const scoresEl = document.getElementbyID ("scores");
+const finalScoreEl= document.getElementbyID ("finalScore");
+const gameoverDiv = document.getElementbyID ("gameover");
+const quizTimer = document.getElementById ("timer");
+const startBtn = document.getElementById ("startBtn");
+const startQuizDiv = document.getElementById ("startpage");
+const scoreContainer = document.getElementById ("scoreContainer");
+const scoreDiv = document.getElementById ("scorePage");
+const scoreInputName = document.getElementById ("initials");
+const scoreDisplay = document.getElementById ("score-initials");
+const endGameBtns = document.getElementById ("endGameBtns");
+const submitScoreBtn = document.getElementById ("submitScoreBtn");
+const scoreDisplay = document.getElementById ("score");
+const buttonA = document.getElementById ("a");
+const buttonB = document.getElementById ("b");
+const buttonC = document.getElementById ("c");
+const buttonD = document.getElementById ("d");
 
 //Questions and answer key
 const quizQuestion = [{
@@ -27,7 +27,47 @@ const quizQuestion = [{
   choiceC: "more stuff",
   choiceD: "nothing",
   correctAnswer: "a"
-  }
+  },
+  {
+  question: "...",
+  choiceA: "stuff",
+  choiceB: "also stuff",
+  choiceC: "more stuff",
+  choiceD: "nothing",
+  correctAnswer: "b"
+  },
+  {
+  question: "...",
+  choiceA: "stuff",
+  choiceB: "also stuff",
+  choiceC: "more stuff",
+  choiceD: "nothing",
+  correctAnswer: "d"
+  },
+  {
+  question: "...",
+  choiceA: "stuff",
+  choiceB: "also stuff",
+  choiceC: "more stuff",
+  choiceD: "nothing",
+  correctAnswer: "c"
+  },
+  {
+  question: "...",
+  choiceA: "stuff",
+  choiceB: "also stuff",
+  choiceC: "more stuff",
+  choiceD: "nothing",
+  correctAnswer: "a"
+  },
+  {
+    question: "...",
+    choiceA: "stuff",
+    choiceB: "also stuff",
+    choiceC: "more stuff",
+    choiceD: "nothing",
+    correctAnswer: "a"
+  },
 ];
 
 //Variables
@@ -169,5 +209,5 @@ function checkAnswer(answer) {
 }
 
 //Start quiz button
-startQuizBtn.addEventListener("click", startQuiz);
+startBtn.addEventListener("click", startQuiz);
 

@@ -1,3 +1,4 @@
+
 :root{
     background-color: rgb(7, 40, 112);
     }
@@ -98,7 +99,7 @@
         border: groove 2px;
     }
     
-    #high-scorePage{
+    #scorePage{
         display: none;
         width: 50%;
         border: solid;
@@ -109,7 +110,7 @@
         align-items: center;
     }
     
-    #highscore-header{
+    #score-header{
         display:flex;
         justify-content: space-around;
         border-bottom-style: outset;
@@ -117,7 +118,8 @@
         background-color: #aaa705;
         font-family: sans-serif;
     }
-    #highscoreContainer{
+
+    #scoreContainer{
         height: 100%;
         width: 100%;
         display: none;
@@ -132,14 +134,14 @@
         height: 1.75rem;
     }
     
-    #highscore-initials{
+    #score-initials{
         display: inline-block;
         padding-left: 9.5rem;
         font-family: sans-serif;
         font-weight: bold;
     }
     
-    #highscore-score{
+    #score{
         float: right;
         padding-right: 8.75rem;
         font-family: sans-serif;
@@ -165,4 +167,3 @@
         padding: 30px;
         width: 700px;
     }
-    
