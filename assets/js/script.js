@@ -31,8 +31,8 @@ const quizQuestion = [{
 ];
 
 //Variables
-var finalQuestions = quizQuestion.length;
-var currentQuestion = 0;
+var finalQuestionIndex = quizQuestion.length;
+var currentQuestionIndex = 0;
 var timeLeft=60;
 var timerInterval;
 var score = 0;
@@ -41,14 +41,41 @@ var correct;
 //Generating questions
 function generateQuestion() {
   gameoverDiv.style.display="none";
-  if (currentQuestion === finalQuestion) {
+  if (currentQuestionIndex === finalQuestionIndex) {
     return showScore();
   }
 
-  var
+  var displayQuestion = quizQuestion[currentQuestionIndex];
+  questionsEl.innerHTML = "<p>" + currentQuestion.question + "</p>";
+  buttonA.innerHTML = currentQuestion.choiceA;
+  buttonB.innerHTML = currentQuestion.choiceB;
+  buttonC.innerHTML = currentQuestion.choiceC;
+  buttonD.innerHTML = currentQuestion.choiceD;
+};
+
+//Beginning the quiz
+
+function startQuiz() {
+  gameoverDiv.style.display ="none";
+  startQuizDiv.style.display = "none";
+  generateQuestion();
+
+  //Timer
+  var timerInterval = setInterval(function () {
+    if (timeLeft > 1) {
+      timerEl.textContent = timeLeft + "seconds remaining";
+      timeLeft--;
+    } else if (timeLeft === 1) {
+      timerEl.textContent = timeLeft + "second remaining";
+      timeLeft--;
+    } else {
+      timerEl.textContent = '';
+      clearInterval(timeInterval);
+      displayMessage();
+    }
+  }, 1000);
+  quizBody.style.display = "block";
 }
-
-
 
 
 
