@@ -18,6 +18,7 @@ Try out the quiz here:  https://telacaul.github.io/API_code_quiz/
 * I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 * SO THAT I can gauge my progress compared to my peer
 </br>
+
 * GIVEN I am taking a code quiz
 * WHEN I click the start button
 * THEN a timer starts and I am presented with a question
