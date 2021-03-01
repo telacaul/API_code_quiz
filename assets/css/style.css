@@ -1,11 +1,11 @@
 
 :root{
-    background-color: rgb(4, 78, 112);
+    background-color: rgb(19, 127, 177);
     }
     
     li{
         padding-bottom: 3px;
-        color: #87be63;
+        color: #56c0bb;
         list-style-type: none;
     }
     
@@ -18,6 +18,7 @@
 
     h2{
         font-family: sans-serif;
+        font-size: xx-large;
         margin-top: -.5rem;
         color: #ebebeb;
     }
@@ -115,7 +116,7 @@
         justify-content: space-around;
         border-bottom-style: outset;
         margin-bottom: .5rem;
-        background-color: #85c241;
+        background-color: #43c3b2;
         font-family: sans-serif;
     }
 
@@ -126,7 +127,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        color: rgb(56, 9, 9)
+        color: rgb(3, 3, 3)
     }
     
     #initials{

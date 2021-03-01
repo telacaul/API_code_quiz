@@ -21,43 +21,43 @@ const buttonD = document.getElementById ("d");
 
 //Questions and answer key
 const quizQuestions = [{
-    question: "How do I do this?",
-    choiceA: "stuff",
-    choiceB: "also stuff",
-    choiceC: "more stuff",
-    choiceD: "nothing",
+    question: "What does DOM stand for?",
+    choiceA: "Document Object Model",
+    choiceB: "Data Over Matter",
+    choiceC: "Document Overage Material",
+    choiceD: "Dominant Objection Model",
     correctAnswer: "a"
   },
   {
-    question: "What should I do?",
-    choiceA: "stuff",
-    choiceB: "also stuff",
-    choiceC: "more stuff",
-    choiceD: "nothing",
+    question: "Which of the following will create an alert pop-up?",
+    choiceA: "Alert: Great Work!",
+    choiceB: "alert('Great Work!')",
+    choiceC: "alert(Great Work!)",
+    choiceD: "alert['Great Work']",
     correctAnswer: "b"
   },
   {
-    question: "How can we?",
-    choiceA: "stuff",
-    choiceB: "also stuff",
-    choiceC: "more stuff",
-    choiceD: "nothing",
+    question: "How can you add notes to your html?",
+    choiceA: "!-Notes-!",
+    choiceB: "[Notes]",
+    choiceC: "*Notes",
+    choiceD: "< !--Notes--! >",
     correctAnswer: "d"
   },
   {
-    question: "What is?",
-    choiceA: "stuff",
-    choiceB: "also stuff",
-    choiceC: "more stuff",
-    choiceD: "nothing",
+    question: "What do you type to use Emmet in VS code?",
+    choiceA: "HTML:5",
+    choiceB: "html(5)",
+    choiceC: "html:5",
+    choiceD: "html[5]",
     correctAnswer: "c"
   },
   {
-    question: "Who is?",
-    choiceA: "stuff",
-    choiceB: "also stuff",
-    choiceC: "more stuff",
-    choiceD: "nothing",
+    question: "Where do you add your script element to html?",
+    choiceA: "end of body",
+    choiceB: "start of body",
+    choiceC: "start of header",
+    choiceD: "after body",
     correctAnswer: "a"
   }
 ];
