@@ -1,16 +1,16 @@
 
 :root{
-    background-color: rgb(7, 40, 112);
+    background-color: rgb(4, 78, 112);
     }
     
     li{
         padding-bottom: 3px;
-        color: #aaa705;
+        color: #87be63;
         list-style-type: none;
     }
     
     p{
-        color: #cccccc;
+        color: #ebebeb;
         text-align: center;
         font-size: xx-large;
         font-family: sans-serif;
@@ -19,13 +19,13 @@
     h2{
         font-family: sans-serif;
         margin-top: -.5rem;
-        color: #cccccc;
+        color: #ebebeb;
     }
 
     h3{
         font-family: sans-serif;
         margin-top: 2px;
-        color: #cccccc;
+        color: #ebebeb;
     }
     input{
         text-align: center;
@@ -45,9 +45,9 @@
         display: flex;
         align-items: center;
         font-family: sans-serif;
-        background-color: #aaa705;
+        background-color: #9619df;
         border-radius: 10px;
-        border: 3px #cccccc;
+        border: 3px #ebebeb;
         color: #eeeeee;
         text-align: center;
         font-size: 23px;
@@ -69,7 +69,7 @@
     
     #timer{
         font-family: sans-serif;
-        background-color: #f0845a;
+        background-color: rgb(172, 239, 241);
         color: white;
         font-size: 19px;
         text-align: center;
@@ -115,7 +115,7 @@
         justify-content: space-around;
         border-bottom-style: outset;
         margin-bottom: .5rem;
-        background-color: #aaa705;
+        background-color: #85c241;
         font-family: sans-serif;
     }
 
@@ -160,7 +160,7 @@
         align-items: center;
         font-family: sans-serif;
         border-radius: 10px;
-        border: 3px #cccccc;
+        border: 3px #ebebeb;
         color: #eeeeee;
         text-align: center;
         font-size: 23px;
