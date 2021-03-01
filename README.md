@@ -3,10 +3,10 @@
 This timed quiz gives users 60 seconds to answer 5 coding questions. For every incorrect answer, 10 seconds is deducted from the countdown. The quiz is over once all questions are answered or when the clock reaches zero. When the game is over, the user can save their initials to a scoreboard and can retake the quiz to beat their score.
 
 ## Screenshot
-![startpage]
-![question]
-![results]
-![scoreboard]
+![startpage](./assets/images/startpage.jpg)
+![question](./assets/images/question.jpg)
+![results](./assets/images/results.jpg)
+![scoreboard](./assets/images/scoreboard.jpg)
 
 ## Launch Code Quiz
 Try out the quiz here:  https://telacaul.github.io/API_code_quiz/
