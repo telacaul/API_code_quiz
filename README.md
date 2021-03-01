@@ -1,12 +1,12 @@
-
 # Web API: Code Quiz
 ## Description
-
+This timed quiz gives users 60 seconds to answer 5 coding questions. For every incorrect answer, 10 seconds is deducted from the countdown. The quiz is over once all questions are answered or when the clock reaches zero. When the game is over, the user can save their initials to a scoreboard and can retake the quiz to beat their score.
 
 ## Screenshot
-![Home Page]
-![Question and Timer]
-![Scoreboard]
+![startpage]
+![question]
+![results]
+![scoreboard]
 
 ## Launch Code Quiz
 Try out the quiz here:  https://telacaul.github.io/API_code_quiz/
@@ -17,7 +17,7 @@ Try out the quiz here:  https://telacaul.github.io/API_code_quiz/
 * AS A coding boot camp student
 * I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 * SO THAT I can gauge my progress compared to my peer
-
+</br>
 * GIVEN I am taking a code quiz
 * WHEN I click the start button
 * THEN a timer starts and I am presented with a question
